@@ -13,3 +13,7 @@ describe file('/etc/default/docker') do
   it { should be_file }
   its(:content) { should match /^DOCKER_OPTS=""/ }
 end
+
+describe process("docker") do
+  its(:args) { should match /-d$/ }
+end
