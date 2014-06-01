@@ -9,8 +9,8 @@
     repo: "{{ apt_repository }}"
     state: present
 - name: install docker defaults
-  template:
-    src: ../files/etc/default/docker
+  copy:
+    content: "DOCKER_OPTS=\"{{ docker_opts }}\""
     dest: /etc/default/docker
     owner: root
     group: root
