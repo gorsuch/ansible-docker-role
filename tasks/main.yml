@@ -1,0 +1,14 @@
+---
+- name: docker.io apt key
+  apt_key:
+    id: "{{ apt_key_sig }}"
+    url: "{{ apt_key_url }}"
+    state: present
+- name: docker.io repository
+  apt_repository:
+    repo: "{{ apt_repository }}"
+    state: present
+- name: install docker
+  apt:
+    name: lxc-docker
+    state: present
