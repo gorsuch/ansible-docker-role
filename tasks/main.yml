@@ -4,10 +4,12 @@
     id: "{{ apt_key_sig }}"
     url: "{{ apt_key_url }}"
     state: present
+
 - name: docker.io repository
   apt_repository:
     repo: "{{ apt_repository }}"
     state: present
+
 - name: install docker defaults
   copy:
     content: "DOCKER_OPTS=\"{{ docker_opts }}\""
@@ -17,6 +19,13 @@
     mode: 0744
   notify:
     - reload docker
+
 - name: install docker
   apt:
     name: "lxc-docker={{ version }}"
+
+- name: ensure docker is running
+  service:
+    name: docker
+    enabled: yes
+    state: started
