@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: "Michael gorsuch"
+  description: docker
+  license: MIT
+  min_ansible_version: 1.4
+  version: 0.1.0
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+  categories:
+    - system
+
+dependencies: []
