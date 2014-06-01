@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe package('lxc-docker') do
-  it { should be_installed }
+  it { should be_installed.with_version('0.11.1') }
 end
 
 describe service('docker') do
