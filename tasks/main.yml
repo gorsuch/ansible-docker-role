@@ -8,6 +8,15 @@
   apt_repository:
     repo: "{{ apt_repository }}"
     state: present
+- name: install docker defaults
+  template:
+    src: ../files/etc/default/docker
+    dest: /etc/default/docker
+    owner: root
+    group: root
+    mode: 0744
+  notify:
+    - reload docker
 - name: install docker
   apt:
     name: lxc-docker
