@@ -1,4 +1,4 @@
-ansible-docker-host
+ansible-docker-role
 ===================
 
 An ansible playbook to provision docker hosts on Ubuntu Trusty.
