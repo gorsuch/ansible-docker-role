@@ -19,5 +19,4 @@
     - reload docker
 - name: install docker
   apt:
-    name: lxc-docker
-    state: present
+    name: "lxc-docker={{ version }}"
