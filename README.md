@@ -3,7 +3,9 @@ ansible-docker-host
 
 An ansible playbook to provision docker hosts on Ubuntu Trusty.
 
-Includes a working Vagrant demo so you can see it in action.  Includes Serverspec tests.
+Includes a working Vagrant demo so you can see it in action.  
+
+Includes Serverspec tests.
 
 ## Demo
 
