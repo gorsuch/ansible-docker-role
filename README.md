@@ -1,7 +1,7 @@
 ansible-docker-role
 ===================
 
-An ansible playbook to provision docker hosts on Ubuntu Trusty.
+An ansible playbook to mutate and Ubuntu Trusty box into a  docker host.
 
 Includes a working Vagrant demo so you can see it in action.  
 
