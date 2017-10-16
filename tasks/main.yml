@@ -22,7 +22,7 @@
 
 - name: install docker
   apt:
-    name: "lxc-docker={{ version }}"
+    name: "lxc-docker-{{ version }}"
 
 - name: ensure docker is running
   service:
