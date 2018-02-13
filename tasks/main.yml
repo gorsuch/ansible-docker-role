@@ -24,7 +24,7 @@
 
 - name: install docker
   apt:
-    name: "lxc-docker-{{ version }}"
+    name: "docker-ce"
     force: yes
 
 - name: ensure docker is running
