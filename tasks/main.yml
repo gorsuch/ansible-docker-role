@@ -1,11 +1,4 @@
 ---
-# - name: docker.io apt key
-#   apt_key:
-#     id: "{{ apt_key_sig }}"
-#     #url: "{{ apt_key_url }}"
-#     keyserver: http://keyserver.ubuntu.com/
-#     state: present
-
 - shell: "curl -sSL {{ apt_key_url }} | gpg --import"
 - name: docker.io repository
   apt_repository:
