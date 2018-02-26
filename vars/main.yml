@@ -1,6 +1,6 @@
 ---
-apt_key_url: http://get.docker.io/gpg
+apt_key_url: "https://download.docker.com/linux/{{ ansible_distribution|lower }}/gpg"
 apt_key_sig: A88D21E9
-apt_repository: deb https://get.docker.io/ubuntu docker main
+apt_repository: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ ansible_distribution_release|lower }} stable"
 docker_opts: ""
 version: 0.11.1
