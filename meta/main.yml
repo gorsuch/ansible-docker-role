@@ -4,7 +4,7 @@ galaxy_info:
   description: docker
   license: MIT
   min_ansible_version: 1.4
-  version: 0.3.1
+  version: 0.4.0
 
   platforms:
     - name: Ubuntu
