@@ -1,5 +1,5 @@
 ---
-- shell: "curl -sSL {{ apt_key_url }} | gpg --import"
+- shell: "curl -sSL {{ apt_key_url }} | sudo apt-key add -"
 - name: docker.io repository
   apt_repository:
     repo: "{{ apt_repository }}"
